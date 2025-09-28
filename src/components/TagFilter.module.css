@@ -1,0 +1,157 @@
+.container {
+  padding: var(--space-sm);
+  border-bottom: var(--border-width) solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0;
+}
+
+.modeToggle {
+  padding: var(--space-xxs) var(--space-xs);
+  font-size: var(--font-size-xs);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+
+.modeToggle:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.tag:hover {
+  border-color: var(--color-text);
+}
+
+.selected {
+  background-color: var(--tag-color);
+  border-color: var(--tag-color);
+  color: white;
+}
+
+.tagDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--tag-color);
+}
+
+.selected .tagDot {
+  background-color: white;
+}
+
+.deleteTag {
+  visibility: hidden;
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  color: var(--color-surface);
+  font-size: var(--font-size-sm);
+  line-height: 1;
+}
+
+.tag:hover .deleteTag {
+  visibility: visible;
+}
+
+.deleteTag:hover {
+  background-color: var(--color-error);
+}
+
+.addButton {
+  align-self: flex-start;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-width) dashed var(--color-border);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.addButton:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.input {
+  width: 100%;
+  font-size: var(--font-size-sm);
+}
+
+.createActions {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.createButton,
+.cancelButton {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.createButton {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.createButton:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.cancelButton {
+  border: var(--border-width) solid var(--color-border);
+}
+
+.cancelButton:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}

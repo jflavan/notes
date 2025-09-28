@@ -1,0 +1,144 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  padding: var(--space-md);
+  border-bottom: var(--border-width) solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.titleInput {
+  flex: 1;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.titleInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.saveStatus {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.deleteButton {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius-md);
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  border: var(--border-width) solid var(--color-border);
+}
+
+.deleteButton:hover {
+  background-color: var(--color-error);
+  color: white;
+  border-color: var(--color-error);
+}
+
+.tagSection {
+  padding: var(--space-sm);
+  border-bottom: var(--border-width) solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.tagButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.tagButton:hover {
+  border-color: var(--color-text);
+}
+
+.tagButton.selected {
+  background-color: var(--tag-color);
+  border-color: var(--tag-color);
+  color: white;
+}
+
+.tagDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--tag-color);
+}
+
+.selected .tagDot {
+  background-color: white;
+}
+
+.bodyInput {
+  flex: 1;
+  width: 100%;
+  padding: var(--space-md);
+  border: none;
+  resize: none;
+  background: none;
+  font-family: var(--font-family);
+  line-height: var(--line-height-relaxed);
+  overflow-y: auto;
+}
+
+.bodyInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .header {
+    padding: var(--space-sm);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .titleInput {
+    font-size: var(--font-size-lg);
+  }
+
+  .actions {
+    justify-content: space-between;
+  }
+
+  .bodyInput {
+    padding: var(--space-sm);
+  }
+}

@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  border-right: var(--border-width) solid var(--color-border);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 50vh;
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .main {
+    height: 50vh;
+  }
+
+  /* Hide main when no note is selected on mobile */
+  .main:empty {
+    display: none;
+  }
+}

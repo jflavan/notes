@@ -1,0 +1,43 @@
+.container {
+  padding: var(--space-sm);
+  position: relative;
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.input {
+  width: 100%;
+  padding-right: var(--space-xl); /* Space for clear button */
+  background-color: var(--color-background);
+}
+
+.clear {
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--space-lg);
+  height: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-text-secondary);
+  color: var(--color-surface);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.clear:hover {
+  background-color: var(--color-text);
+}
+
+/* Remove browser's default clear button */
+.input[type="search"]::-webkit-search-decoration,
+.input[type="search"]::-webkit-search-cancel-button,
+.input[type="search"]::-webkit-search-results-button,
+.input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
